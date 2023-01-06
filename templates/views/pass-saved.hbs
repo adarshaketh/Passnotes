@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#datafromdb').DataTable({
+                "ajax": {
+                    "url": "/api/getdata",
+                    "dataSrc": ""
+                },
+                "columns": [
+                    { "data": "tagname" },
+                    { "data": "url" },
+                    { "data": "username" },
+                    { "data": "email" },
+                    { "data": "password" }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    {{>navbar}}
+    <h2> View your Saved Passwords</h2>
+    <div class="container mb-3 mt-3"></div>
+    <table id="datafromdb" class="display table table-striped table-bordered mydatatable" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>URL</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
