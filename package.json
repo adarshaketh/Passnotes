@@ -1,0 +1,23 @@
+{
+  "name": "passnotes",
+  "version": "1.0.0",
+  "description": "PassNotes - A personal Password Manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "passnotes": "nodemon src/app.js -e js,hbs"
+  },
+  "keywords": [],
+  "author": "https://github.com/adarsha2003",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.2.1",
+    "bootstrap": "^5.0.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "nodemon": "^2.0.12"
+  }
+}
